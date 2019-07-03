@@ -35,7 +35,12 @@ export default class Server {
       socket.obtenerUsuarios(cliente, this.io);
       //mensajes
       socket.mensaje(cliente, this.io);
-
+      //marcadores
+      socket.marcadorNuevo(cliente, this.io);
+      // borrar marcadores
+      socket.marcadorBorrar(cliente, this.io);
+      //mover marcador
+      socket.marcadorMover(cliente, this.io);
       //desconectar
       socket.desconectar(cliente, this.io);
     });
